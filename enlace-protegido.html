@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enlace protegido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 300px;
+      width: 90%;
+    }
+    input[type="password"] {
+      padding: 0.5rem;
+      margin: 1rem 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Introduce la contraseña para ver la página:</h2>
+    <input type="password" id="passwordInput" placeholder="Contraseña">
+    <br>
+    <button onclick="abrirPagina()">Entrar</button>
+  </div>
+
+  <script>
+    function abrirPagina() {
+      var password = document.getElementById("passwordInput").value;
+      if(password === "SARDINA") {
+        window.location.href = "https://sites.google.com/view/fani-y-guille/mensajes-a-los-novios";
+      } else {
+        alert("Contraseña incorrecta");
+      }
+    }
+  </script>
+</body>
+</html>
